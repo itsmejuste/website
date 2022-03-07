@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap');
+body{
+    margin:0;
+    padding:0;
+    background-color: rgb(205, 226, 172);
+}
+main{
+    display: grid;
+    grid-gap: 5%;
+    grid-template-columns: 70% 1fr;
+}
+aside {
+    font-family: 'Dosis', sans-serif;
+    padding-right: 2vw;
+    font-size: 2vw;
+}
+ a{
+    display: flex;
+    text-decoration: none;
+    font-family: 'Dosis', sans-serif;
+    font-size: 2vw ;
+    color: rgb(18, 73, 27);
+
+}
+button{
+    border-radius:2vw;
+    color: rgb(7, 6, 0);
+    background-image: url("../graphics/buttonbg.svg");
+    background-size: cover;
+    padding: 1vw 1vw;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 2vw;
+    font-family: 'Dosis', sans-serif;
+    margin: 1vw 1vw;
+    cursor: pointer;
+
+
+
+}
+
+#screen{
+    position: relative;
+    width: 80%;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    place-self: center;
+}
+#game{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color:gray;
+}
+
+#game_background{
+    background-image:url("../graphics/backgroundfinal.svg");
+    height: 100%;
+    position:relative;
+    background-size: cover;
+}
+#game_ui{
+    width: 100%;
+    height:10%;
+    position:absolute;
+    top:1%;
+    display: flex;
+    justify-content: space-around;
+}
+#score_board,
+#health_board, #time_board{
+    font-family: 'Dosis', sans-serif;
+    width: 30%;
+    padding:0;
+    background-color: rgba(60, 204, 149, 0.2);
+    color: rgb(29, 131, 29);
+    display: flex;
+    align-items: center;
+    font-size: 2vw;
+}
+#time_box {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    filter: invert(1);
+}
+
+#title_screen,
+#instructions,
+#middle_ground,
+#game_over,
+#times_up {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+#title_screen {
+    background-color: bisque;
+}
+
+#instructions {
+    background-color: aquamarine;
+}
+#game_over, #times_up {
+    font-family: 'Dosis', sans-serif;
+    font-size: 4vw;
+    align-self: center;
+    
+}
+
+#game_over {
+    background-color: rgba(201, 125, 26, 0.582);
+    
+    
+}
+
+#times_up {
+background-color: darkgreen;
+}
+
+.playagain1,
+.playagain2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.playagain {
+    background-color: darkred;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3vw;
+    
+}
+
+.playagain2 {
+    background-color: burlywood;
+    color: darkblue;
+}
+
+.hidden {
+    visibility: hidden;
+}
+/* here should be title screen, instructions, game over, win screens.
+hide them! then make navigation bar*/
+/* adding containers */
+#container1, #container2, #container3, #container4{
+    position:absolute;
+    width:20%;
+    aspect-ratio: 1/1;
+}
+
+/* adding positions */
+.position1{
+    left: -6%;
+    top:-1%;
+}
+.position2{
+    left: -20%;
+    top:-6%;
+}
+.position3{
+    left: 40%;
+    top: 40%;
+}
+.position4{
+    left: 20%;
+    top: 30%;
+}
+
+/* animations */
+.stop {
+    animation-play-state: paused;
+}
+
+.passThrough{
+    animation-name: passThrough;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+    animation-duration:8s;
+
+}
+@keyframes passThrough{
+    0%{
+        transform: translateX(-20%);
+    }
+    50%{
+        transform: translateX(580%);
+    }
+    51%{
+        transform: translateX(580%) scaleX(-1);
+    }
+    100%{
+        transform: translateX(-20%) scaleX(-1);
+    }
+}
+.scaleAndDisappear{
+    animation-name: scaleAndDisappear;
+    animation-duration: 1.4s;
+}
+@keyframes scaleAndDisappear{
+    100%{
+        transform: scale(0);
+    }
+}
+
+
+/* adding sprites - bees */
+#sprite1{
+    width: 100%;
+    height:100%;
+    background-image:url("../graphics/bee.svg");
+    background-size: 100%;
+}
+#sprite2{
+    width:100%;
+    height:100%;
+    background-image:url("../graphics/bee.svg");
+    background-size: 100%;
+}
+#sprite3{
+    width:100%;
+    height:100%;
+    background-image:url("../graphics/impostor.svg");
+    background-size: 100%;
+}
+#sprite4{
+    width:100%;
+    height:100%;
+    background-image:url("../graphics/impostor.svg");
+    background-size: 100%;
+}

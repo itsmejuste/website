@@ -1,0 +1,13 @@
+
+#screen{
+    position:relative;
+    width:80%;
+    aspect-ratio: 16/9;
+}
+#testas{
+    background-image: url("/graphics/backgroundfinal.svg");
+    position:absolute;
+    aspect-ratio: 1/1;
+    background-size: cover;
+    width: 100%;
+}

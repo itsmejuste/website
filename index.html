@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="meta-viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <link rel="stylesheet" href="../website/css/game.css"/>
+    <title>BeeHive</title>
+</head>
+<body>
+    <header>
+        <nav id="globalNav">
+            <ul>
+                <li><a href="#">Assets</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="screen">
+            <div id="game">
+                <div id="game_background"></div>
+                <div id="game_sprites">
+                 
+                    <div id="container1" class="position1 passThrough">
+                        <div id="sprite1"></div>
+                    </div>
+                    <div id="container2" class="position2 passThrough">
+                        <div id="sprite2"></div>
+                    </div>
+                    <div id="container3" class="position3 passThrough">
+                        <div id="sprite3"></div>
+                    </div>
+                    <div id="container4" class="position4 passThrough">
+                        <div id="sprite4"></div>
+                    </div>
+
+                </div>
+
+                <div id="game_ui">
+                    <div id="score_board">Your score: <span id="currentScore"></span></div>
+                    <div id="health_board">Lives</div>
+                    <div id="time_board" class="timerDown">
+                        <div id="time_box"></div>
+        
+                    </div>
+                </div>
+            
+            </div>
+            <div id="title_screen" class="hidden">
+                <button>START</button></div>
+            <div id="instructions" class="hidden">
+                <button> <img src="../graphics/how1.svg" alt="how to"></button>
+            </div>
+            <div id="game_over" class="hidden">YOU LOST<br>
+                <div class="playagain"><button>PLAY AGAIN</button></div>
+            </div>
+            <div id="times_up" class="hidden">GOOD JOB! YOUR SCORE:<br>
+                <div class="playagain2">PLAY AGAIN</div>
+            </div>
+        </section>
+        <aside id="gameinfo">
+            <p>Game Beehive</p>
+            
+        </aside>
+        
+    </main>
+    <footer>
+        <nav id="someNav">
+            <ul>
+                
+            </ul>
+        </nav>
+    </footer>
+    <script src="../js/game.js"></script>
+</body>
+</html>
